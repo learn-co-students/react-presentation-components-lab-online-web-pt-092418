@@ -8,18 +8,29 @@ class SimpleComponent extends Component {
   }
 
   render() {
-    console.log("inside render")
+    // console.log("inside render")
     return (
       <div onClick={this.handleClick}>{this.state.mood}</div>
     );
   }
 
-  handleClick = () =>{
-    // e.preventDefault();
-    this.setState({
-      mood: "sad"
-    })
+  handleClick = (e) =>{
+    e.preventDefault();
+    if (this.state.mood === 'happy') {
+      this.setState({
+        mood: "sad"
+      })
+    } else if (this.state.mood === 'sad') {
+      this.setState({
+        mood: "happy"
+      })
+    }
   }
+
+ //  handleClick = () => {
+ //   const newMood = this.state.mood === 'happy' ? 'sad' : 'happy';
+ //   this.setState({ mood: newMood });
+ // }
 
 }
 

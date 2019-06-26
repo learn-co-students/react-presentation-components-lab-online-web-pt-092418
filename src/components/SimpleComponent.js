@@ -3,14 +3,9 @@ import React, { Component } from 'react';
 
 class SimpleComponent extends Component {
 
-  constructor () {
-    super();
-
-    this.state = {
-      mood: "happy"
-    }
+  state = {
+    mood: "happy"
   }
-
 
   render() {
     console.log("inside render")

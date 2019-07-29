@@ -1,6 +1,7 @@
 // Code SimpleComponent Here
 import React, { Component} from 'react';
 
+
 export default class SimpleComponent extends Component {
    constructor(props){
         super(props)
@@ -14,8 +15,8 @@ export default class SimpleComponent extends Component {
 
     render(){
         return (
-            <div>
-                <button onClick={this.handleClick}>{this.state}</button>
+            <div onClick={() => this.handleClick()}>
+                <button>{this.state.mood}</button>
                 
             </div>
         )

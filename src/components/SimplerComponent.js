@@ -1,10 +1,12 @@
 // Code SimplerComponent Here
 import React, {Component} from 'react';
 
-const SimplerComponent = props =>
+const SimplerComponent = props => (
         
-    <div>I am just happy
+    <div onClick={props.handleClick}>I am just happy
             
-            </div>;
+            </div>
+);
         
 
+export default SimplerComponent;
